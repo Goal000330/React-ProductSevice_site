@@ -10,6 +10,7 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       width: "276px",
       background: "#fff",
       padding: "48px 12px 48px 12px",
+      zIndex: 2,
     },
     logoImg: {
       width: "167px",

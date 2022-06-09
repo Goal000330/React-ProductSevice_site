@@ -54,9 +54,9 @@ export default function Sidebar() {
             );
           })}
         </div>
-        <div className={classes.studyLink}>
-          <img src={banner} className={classes.banner}></img>
-        </div>
+      </div>
+      <div className={classes.studyLink}>
+        <img src={banner} className={classes.banner}></img>
       </div>
       {rightPanel ? (
         <div className={classes.sidebarRight}>
