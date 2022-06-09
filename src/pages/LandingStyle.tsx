@@ -82,13 +82,10 @@ export const LandingStyle = makeStyles((theme: Theme) =>
       boxShadow: "40px 50px 30px rgb(0 0 0 / 10%)",
       height: "400px",
       overflow: "hidden",
-      "&::before": {
-        backgroundImage: `url(${serviceBackground1})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        filter: "brightness(0.9)",
-      },
+      backgroundImage: `url(${serviceBackground1})`,
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
       "&:hover": {
         transition: ".3s cubic-bezier(.4,.4,0,1)",
         transform: "translate(0px, 0px) scale(1.05, 1.05)",
