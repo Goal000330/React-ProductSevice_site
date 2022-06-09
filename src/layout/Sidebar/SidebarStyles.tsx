@@ -116,6 +116,7 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       height: "19px",
     },
     sidebarRight: {
+      zIndex: 2,
       position: "fixed",
       left: 300,
       top: 0,

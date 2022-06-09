@@ -10,12 +10,29 @@ export const Landing = () => {
       <div className={classes.popularRankingRoot}>
         <div className={classes.popularRankingTitleContainer}>
           <div className={classes.popularRankingLeft}>
-            <img
-              className={classes.kingIcon}
-              src="https://storage.googleapis.com/studio-design-asset…56_webp_3853ca4a-b820-40b2-a329-1e8d376a46da.webp"
-            />
+            <i className={clsx("fas fa-crown", classes.kingIcon)}></i>
             <div className={classes.popularRankingTitleLetter}>
               人気ランキング
+            </div>
+          </div>
+          <div className={classes.seeMoreContainer}>
+            <span className={classes.seeMoreLetter}>もっと見る k</span>
+            <i className={clsx("fas fa-chevron-right", classes.moreIcon)}></i>
+          </div>
+        </div>
+        <div className={classes.CardContainer}>
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
+        </div>
+      </div>
+      {/* /// */}
+      <div className={classes.popularRankingRoot}>
+        <div className={classes.popularRankingTitleContainer}>
+          <div className={classes.popularRankingLeft}>
+            <i className={clsx("fas fa-bell", classes.kingIcon)}></i>
+            <div className={classes.popularRankingTitleLetter}>
+              新着ニュース
             </div>
           </div>
           <div className={classes.seeMoreContainer}>

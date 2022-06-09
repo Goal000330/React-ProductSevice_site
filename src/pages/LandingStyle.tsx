@@ -24,8 +24,8 @@ export const LandingStyle = makeStyles((theme: Theme) =>
       alignItems: "center",
     },
     kingIcon: {
-      width: "24px",
-      height: "24px",
+      fontSize: "24px",
+      marginLeft: "12px",
     },
     popularRankingTitleLetter: {
       cursor: "pointer",
@@ -78,11 +78,14 @@ export const LandingStyle = makeStyles((theme: Theme) =>
         color: "#9ab0bc !important",
       },
     },
-    moreIcon: {},
+    moreIcon: {
+      //   width: "48px",
+      //   height: "48px",
+    },
     CardContainer: {
       display: "flex",
       alignItems: "center",
-      justifyContent: "space-between",
+      justifyContent: "space-around",
     },
   })
 );

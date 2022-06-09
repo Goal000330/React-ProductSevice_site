@@ -9,7 +9,7 @@ export const FooterStyles = makeStyles((theme: Theme) =>
       position: "relative",
       background: "#192225",
       margin: "0px 0px 0px 0px",
-      zIndex: 3,
+      // zIndex: 3,
       maxWidth: "100%",
       padding: "24px 60px",
       justifyContent: "space-between",
