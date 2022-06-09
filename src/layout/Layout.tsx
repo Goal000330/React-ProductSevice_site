@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Landing } from "pages/Landing";
 import { LayoutStyles } from "./LayoutStyle";
 import Header from "./Header/Header";
+import Sidebar from "./Sidebar/Sidebar";
 
 export default function Layout() {
   const classes = LayoutStyles();
@@ -9,7 +10,7 @@ export default function Layout() {
   return (
     <Router>
       <div className={classes.root}>
-        <div className={classes.sidebar}></div>
+        <Sidebar/>
         <div className={classes.container}>
           <Header />
           <Routes>
