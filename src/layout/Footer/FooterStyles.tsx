@@ -9,10 +9,19 @@ export const FooterStyles = makeStyles((theme: Theme) =>
       position: "relative",
       background: "#192225",
       margin: "0px 0px 0px 0px",
-      // zIndex: 3,
-      maxWidth: "100%",
+      width: "calc(100% - 300px)",
+      marginLeft: "300px",
       padding: "24px 60px",
       justifyContent: "space-between",
+      boxSizing: "border-box",
+      [theme.breakpoints.down(1140)]: {
+        zIndex: 3,
+        marginLeft: 0,
+        width: "100%",
+      },
+      [theme.breakpoints.down(840)]: {
+        flexDirection: "column",
+      },
     },
     link: {
       color: "#55727e",
@@ -22,8 +31,12 @@ export const FooterStyles = makeStyles((theme: Theme) =>
       height: "auto",
       letterSpacing: "0.15em",
       lineHeight: "1.4",
+      cursor: "pointer",
       "& i": {
         color: "#55727e",
+      },
+      [theme.breakpoints.down(840)]: {
+        marginBottom: "24px",
       },
     },
     imLink: {

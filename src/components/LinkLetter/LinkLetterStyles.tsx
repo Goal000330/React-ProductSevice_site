@@ -15,6 +15,16 @@ export const LinkLetterStyles = makeStyles((theme: Theme) =>
       transitionDuration: "800ms",
       display: "flex",
       cursor: "pointer",
+      "&:hover": {
+        opacity: 0.5,
+        transitionDelay: "0ms",
+        transitionDuration: "600ms",
+        "& $moreIcon": {
+          transform: "translate(6px, 0px)",
+          transitionDelay: "0ms",
+          transitionDuration: "600ms",
+        },
+      },
     },
     seeMoreLetter: {
       color: "000000",
@@ -32,6 +42,9 @@ export const LinkLetterStyles = makeStyles((theme: Theme) =>
       marginRight: "5px",
       "&:hover": {
         color: "#9ab0bc !important",
+      },
+      [theme.breakpoints.down(540)]: {
+        fontSize: "12px",
       },
     },
     moreIcon: {

@@ -1,13 +1,9 @@
 /** @format */
 
-import {
-  createStyles,
-  makeStyles,
-  Theme,
-  withStyles,
-} from "@material-ui/core/styles";
+import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import serviceBackground1 from "assets/images/service1.png";
 import serviceBackground2 from "assets/images/service2.png";
+import landBackground from "assets/images/landing-background.png";
 
 export const LandingStyle = makeStyles((theme: Theme) =>
   createStyles({
@@ -16,17 +12,29 @@ export const LandingStyle = makeStyles((theme: Theme) =>
     },
     landingImgRoot: {
       position: "relative",
-    },
-    landingImg: {
-      width: "100%",
-      height: "534px",
+      backgroundImage: `url(${landBackground})`,
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      textAlign: "left",
+      [theme.breakpoints.down(1140)]: {
+        textAlign: "right",
+      },
+      [theme.breakpoints.down(540)]: {
+        textAlign: "left",
+      },
     },
     landingLetter: {
-      position: "absolute",
-      right: "48px",
-      bottom: "96px",
       width: "368px",
       height: "150px",
+      padding: "288px 48px 96px",
+      transition: ".3scubic-bezier(.4,.4,0,1)",
+      [theme.breakpoints.down(540)]: {
+        padding: "192px 48px 48px",
+        transform: "translate(1px, 2px)",
+        width: "185px",
+        height: "76px",
+      },
     },
     popularRankingRoot: {
       padding: "48px",
@@ -133,7 +141,6 @@ export const LandingStyle = makeStyles((theme: Theme) =>
       flexWrap: "nowrap",
       justifyContent: "center",
       margin: "0px 0px 0px 24px",
-      // padding: "12px 48px 12px",
       transitionDelay: "0ms",
       transitionDuration: "600ms",
       "& i": {

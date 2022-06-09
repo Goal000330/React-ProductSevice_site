@@ -1,24 +1,20 @@
-import "./ServiceCard.css";
+/** @format */
+
 import backImg from "./../../assets/images/2.png";
+import { ServiceCardStyles } from "./ServiceCardStyles";
+
 export default function ServiceCard() {
-  // interface Props {
-  //   children: React.ReactNode;
-  //   color?: string;
-  //   disabled?: boolean;
-  //   className?: any;
-  //   onClick?: () => void;
-  // }
+  const classes = ServiceCardStyles();
 
   return (
     <>
-      <div className="c-root">
-        <img src={backImg} className="c-imageContainer" />
-        <div className="c-descContainer">
+      <div className={classes.root}>
+        <img src={backImg} className={classes.cardImg} />
+        <div className={classes.cardDes}>
           〜150,000円｜本格ホームページ・サービスページ制作
         </div>
-        <div className="c-cardFooterContainer">
-          <i className="fas fa-pen-nib"></i>
-          <span className="c-footerLetter">WEB制作</span>
+        <div className={classes.cardFooter}>
+          <i className='fas fa-pen-nib'></i>WEB制作
         </div>
       </div>
     </>

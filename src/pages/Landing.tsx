@@ -4,7 +4,6 @@ import { LandingStyle } from "./LandingStyle";
 import clsx from "clsx";
 import ServiceCard from "components/ServiceCard/ServiceCard";
 import LinkLetter from "components/LinkLetter/LinkLetter";
-import landBackground from "assets/images/landing-background.png";
 import landLetter from "assets/images/landing-letter.webp";
 import { Grid } from "@material-ui/core";
 
@@ -13,7 +12,6 @@ export const Landing = () => {
   return (
     <>
       <div className={classes.landingImgRoot}>
-        <img src={landBackground} className={classes.landingImg}></img>
         <img src={landLetter} className={classes.landingLetter}></img>
       </div>
       <div className={classes.popularRankingRoot}>

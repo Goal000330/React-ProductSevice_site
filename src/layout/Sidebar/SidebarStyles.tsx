@@ -10,7 +10,11 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       width: "276px",
       background: "#fff",
       padding: "48px 12px 48px 12px",
+      height: "100%",
       zIndex: 2,
+      [theme.breakpoints.down(840)]: {
+        display: "none",
+      },
     },
     logoImg: {
       width: "167px",

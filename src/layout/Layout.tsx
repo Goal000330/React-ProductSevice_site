@@ -6,7 +6,6 @@ import { LayoutStyles } from "./LayoutStyle";
 import Header from "./Header/Header";
 import Sidebar from "./Sidebar/Sidebar";
 import Footer from "./Footer/Footer";
-import Breadcrumbs from "./Breadcrumbs/Breadcrumbs";
 
 export default function Layout() {
   const classes = LayoutStyles();
@@ -20,7 +19,6 @@ export default function Layout() {
           <Route path='/' element={<Landing />} />
         </Routes>
       </div>
-      <Breadcrumbs />
       <Footer />
     </Router>
   );
