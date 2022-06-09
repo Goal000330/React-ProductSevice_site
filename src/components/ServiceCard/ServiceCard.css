@@ -21,7 +21,7 @@
   position: relative;
 }
 .c-imageContainer {
-  border-radius: 0;
+  border-radius: 20px;
   flex: none;
   height: 180px;
   margin: 0px 0px 0px 0px;
@@ -29,6 +29,7 @@
   transition-duration: 3000ms;
   width: 100%;
   max-width: 100%;
+  margin-bottom: 20px;
 }
 
 .c-descContainer {
@@ -51,4 +52,24 @@
 .c-cardFooterContainer {
   display: flex;
   align-items: center;
+}
+.c-footerLetter {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 0;
+  color: #55727e;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 700;
+  height: auto;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 6px 0px;
+  text-align: left;
+  transition-delay: 300ms;
+  transition-duration: 1000ms;
+  width: auto;
+  z-index: 1;
+  max-width: 100%;
+  justify-content: flex-start;
 }

@@ -25,6 +25,8 @@ export const Landing = () => {
         </div>
         <div className={classes.CardContainer}>
           <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
         </div>
       </div>
     </>
