@@ -8,8 +8,9 @@ export const LayoutStyles = makeStyles((theme: Theme) =>
       display: "flex",
     },
     container: {
-      flexGrow: 1,
       background: "#ebeff2",
+      width: "calc(100% - 300px)",
+      marginLeft: "300px",
     },
     footer: {},
   })
