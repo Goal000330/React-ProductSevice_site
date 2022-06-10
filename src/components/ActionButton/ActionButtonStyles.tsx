@@ -20,7 +20,7 @@ export const ActionButtonStyles = makeStyles((theme: Theme) =>
         marginLeft: "5px",
         fontSize: "13px",
         lineHeight: "16px",
-        color: "#000",
+        color: "#fff",
       },
       "&:hover": {
         boxShadow: "0px 0px 0px rgb(0 0 0 / 20%)",
