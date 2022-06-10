@@ -12,6 +12,7 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       padding: "48px 12px 48px 12px",
       height: "100%",
       zIndex: 2,
+      transition: ".3s cubic-bezier(.4,.4,0,1)",
       [theme.breakpoints.down(840)]: {
         display: "none",
       },
@@ -70,6 +71,7 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       alignItems: "center",
       height: "72px",
       borderBottom: "1px solid #eeeeee",
+      transition: ".3s cubic-bezier(.4,.4,0,1)",
       cursor: "pointer",
       "&:hover": {
         opacity: 0.5,
@@ -124,6 +126,7 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       height: "19px",
     },
     sidebarRight: {
+      transition: ".3s cubic-bezier(.4,.4,0,1)",
       zIndex: 2,
       position: "fixed",
       left: 300,
@@ -158,6 +161,7 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       alignItems: "center",
       padding: "0 12px",
       borderBottom: "1px solid #475b69",
+      transition: ".3s cubic-bezier(.4,.4,0,1)",
       cursor: "pointer",
       "&:hover": {
         opacity: 0.5,

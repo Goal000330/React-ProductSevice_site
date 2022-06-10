@@ -96,6 +96,7 @@ export const LandingStyle = makeStyles((theme: Theme) =>
       },
     },
     service1: {
+      cursor: "pointer",
       height: "520px",
       boxShadow: "40px 50px 30px rgb(0 0 0 / 10%)",
       overflow: "hidden",
@@ -139,6 +140,7 @@ export const LandingStyle = makeStyles((theme: Theme) =>
       },
     },
     service2: {
+      cursor: "pointer",
       height: "520px",
       boxShadow: "40px 50px 30px rgb(0 0 0 / 10%)",
       overflow: "hidden",

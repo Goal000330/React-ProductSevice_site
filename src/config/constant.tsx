@@ -13,7 +13,7 @@ export const SidbarData = [
     router: [
       {
         name: "食事・美容",
-        link: "",
+        link: "/private/healthy",
       },
       {
         name: "ジム・マッサージ",

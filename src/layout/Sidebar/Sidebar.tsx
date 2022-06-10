@@ -6,11 +6,21 @@ import avatar from "../../assets/images/avatar.png";
 import banner from "../../assets/images/banner.png";
 import { SidbarData } from "config/constant";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Sidebar() {
   const classes = SidebarStyles();
   const [rightPanel, setRightPanel] = useState(false);
   const [rightRouters, setRightRouters] = useState<any>();
+  const navigate = useNavigate();
+
+  const handleLogo = () => {
+    navigate("/");
+  };
+
+  const handleAccount = () => {
+    navigate("/account");
+  };
 
   const handleRighPanel = (e: any) => {
     if (e?.length === 0 || e === undefined || e === null) {
@@ -23,13 +33,19 @@ export default function Sidebar() {
 
   const handleLink = (e: any) => {
     setRightPanel(false);
+    navigate(e);
   };
 
   return (
     <>
       <div className={classes.root}>
-        <img src={LogoImg} className={classes.logoImg} alt='logo' />
-        <div className={classes.avatarRoot}>
+        <img
+          src={LogoImg}
+          className={classes.logoImg}
+          alt='logo'
+          onClick={() => handleLogo()}
+        />
+        <div className={classes.avatarRoot} onClick={() => handleAccount()}>
           <img src={avatar} className={classes.avatarImg} />
           <div className={classes.avatarName}>しさく くらら</div>
           <div className={classes.avatarJob}>合同会社施策ぱっと</div>

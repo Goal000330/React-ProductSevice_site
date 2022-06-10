@@ -8,9 +8,22 @@ export const BreadcrumbsStyles = makeStyles((theme: Theme) =>
       display: "flex",
       position: "relative",
       background: "#fff",
+      marginLeft: 0,
       width: "100%",
       padding: "24px 0",
       justifyContent: "flex-start",
+      transition: ".3s cubic-bezier(.4,.4,0,1)",
+      transitionDelay: "200ms",
+      transitionDuration: "200ms",
+      boxSizing: "border-box",
+      [theme.breakpoints.down(1140)]: {
+        width: "calc(100% - 300px)",
+        marginLeft: "300px",
+      },
+      [theme.breakpoints.down(840)]: {
+        marginLeft: 0,
+        width: "100%",
+      },
     },
     homeLink: {
       color: "#aaaaaa",
