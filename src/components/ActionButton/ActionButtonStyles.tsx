@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/styles";
 export const ActionButtonStyles = makeStyles((theme: Theme) =>
   createStyles({
     darkRoot: {
+      cursor: "pointer",
       display: "flex",
       flexWrap: "nowrap",
       width: "fit-content",
@@ -28,6 +29,7 @@ export const ActionButtonStyles = makeStyles((theme: Theme) =>
       },
     },
     lightRoot: {
+      cursor: "pointer",
       display: "flex",
       flexWrap: "nowrap",
       justifyContent: "center",
@@ -69,6 +71,17 @@ export const ActionButtonStyles = makeStyles((theme: Theme) =>
       lineHeight: "1.9",
       margin: 0,
       wordBreak: "keep-all",
+    },
+    disable: {
+      opacity: 0.7,
+      cursor: "no-drop",
+      "&:hover": {
+        boxShadow: "20px 20px 30px rgb(0 0 0 / 20%) !important",
+        transform: "translate(0px, 0px) !important",
+      },
+    },
+    noDisable: {
+      opacity: 1,
     },
   })
 );

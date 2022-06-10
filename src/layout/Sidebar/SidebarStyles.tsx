@@ -19,6 +19,10 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
     logoImg: {
       width: "167px",
       height: "44px",
+      cursor: "pointer",
+      "&:hover": {
+        opacity: 0.5,
+      },
     },
     avatarRoot: {
       marginTop: "24px",
