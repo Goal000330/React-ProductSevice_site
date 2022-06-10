@@ -81,7 +81,7 @@ export const SidbarData = [
     router: [
       {
         name: "利用方法",
-        link: "",
+        link: "/usage",
       },
       {
         name: "お問い合わせ",
