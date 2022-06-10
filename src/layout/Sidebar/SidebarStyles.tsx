@@ -155,6 +155,9 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       padding: "0 12px",
       borderBottom: "1px solid #475b69",
       cursor: "pointer",
+      "&:hover": {
+        opacity: 0.5,
+      },
     },
     rightArrow: {
       "& i": {

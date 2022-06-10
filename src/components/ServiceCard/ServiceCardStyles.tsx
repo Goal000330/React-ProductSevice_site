@@ -5,13 +5,12 @@ import { makeStyles } from "@material-ui/styles";
 export const ServiceCardStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      width: "100%",
       background: "#fff",
       borderRadius: "10px",
       boxShadow: "0px 2px 20px rgb(0 0 0 / 10%)",
       borderBottom: "solid 1px #eeeeee",
       padding: "24px",
-      margin: "0 12px",
+      margin: "0 12px 24px 12px",
       cursor: "pointer",
       "&:hover": {
         boxShadow: "0px 0px 0px rgb(0 0 0 / 10%)",
