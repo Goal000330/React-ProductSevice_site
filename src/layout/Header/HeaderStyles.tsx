@@ -14,7 +14,7 @@ export const HeaderStyles = makeStyles((theme: Theme) =>
       height: "96px",
     },
     searchRoot: {
-      width: "467px",
+      width: "calc(100% - 348px)",
       height: "50px",
       padding: "0 24px",
       display: "flex",

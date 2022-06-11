@@ -63,15 +63,16 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      padding: "0 12px",
     },
     sidebarItem: {
       width: "100%",
       display: "flex",
       alignItems: "center",
-      height: "72px",
+      justifyContent: "center",
+      height: "71px",
       borderBottom: "1px solid #eeeeee",
       transition: ".3s cubic-bezier(.4,.4,0,1)",
+      margin: "0 12px",
       cursor: "pointer",
       "&:hover": {
         opacity: 0.5,
@@ -93,7 +94,10 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       height: "auto",
       letterSpacing: "0.15em",
       lineHeight: "1.4",
-      margin: "0 12px",
+      padding: "0 12px",
+      minWidth: "171.2px",
+      boxSizing: "border-box",
+      textAlign: "start",
     },
     itemBtn: {
       "& i": {

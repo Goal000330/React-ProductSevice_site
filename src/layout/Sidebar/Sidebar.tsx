@@ -23,11 +23,12 @@ export default function Sidebar() {
   };
 
   const handleRighPanel = (e: any) => {
-    if (e?.length === 0 || e === undefined || e === null) {
+    if (!e.show) {
       setRightPanel(false);
+      navigate(e.link);
     } else {
       setRightPanel(true);
-      setRightRouters(e);
+      setRightRouters(e.routers);
     }
   };
 

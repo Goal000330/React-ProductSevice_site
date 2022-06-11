@@ -14,11 +14,10 @@ export const Healthy = () => {
           <div className={classes.headerTitle}>食事・美容</div>
           <div className={classes.smallTitle}> すべて</div>
           <div className={classes.categoryRoot}>
-            <div className={classes.categoryTitle}>資料制作・デザイン</div>
-            <div className={classes.categoryTitle}>資料制作・デザイン</div>
-            <div className={classes.categoryTitle}>資料制作・デザイン</div>
-            <div className={classes.categoryTitle}>資料制作・デザイン</div>
-            <div className={classes.categoryTitle}>資料制作・デザイン</div>
+            <div className={classes.categoryTitle}>WEB制作</div>
+            <div className={classes.categoryTitle}>印刷物制作</div>
+            <div className={classes.categoryTitle}>動画制作</div>
+            <div className={classes.categoryTitle}>写真撮影・編集</div>
             <div className={classes.categoryTitle}>資料制作・デザイン</div>
           </div>
         </div>

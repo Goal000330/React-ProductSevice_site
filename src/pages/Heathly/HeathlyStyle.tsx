@@ -58,7 +58,7 @@ export const HeathlyStyles = makeStyles((theme: Theme) =>
       fontWeight: 980,
       height: "auto",
       lineHeight: 1.2,
-      minWidth: "96px",
+      marginRight: "48px",
     },
   })
 );

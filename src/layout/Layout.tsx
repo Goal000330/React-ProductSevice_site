@@ -9,6 +9,7 @@ import Header from "./Header/Header";
 import Sidebar from "./Sidebar/Sidebar";
 import Footer from "./Footer/Footer";
 import { Usage } from "pages/Usage/Usage";
+import { Contact } from "pages/Contact/Contact";
 
 export default function Layout() {
   const classes = LayoutStyles();
@@ -23,6 +24,7 @@ export default function Layout() {
           <Route path='/account' element={<Account />} />
           <Route path='/private/healthy' element={<Healthy />} />
           <Route path='/usage' element={<Usage />} />
+          <Route path='/usage/contact' element={<Contact />} />
         </Routes>
       </div>
       <Footer />
