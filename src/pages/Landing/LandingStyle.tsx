@@ -1,3 +1,5 @@
+/** @format */
+
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import serviceBackground1 from "assets/images/service1.png";
 import serviceBackground2 from "assets/images/service2.png";
@@ -28,10 +30,12 @@ export const LandingStyle = makeStyles((theme: Theme) =>
       padding: "288px 48px 96px",
       transition: ".3scubic-bezier(.4,.4,0,1)",
       [theme.breakpoints.down(540)]: {
-        padding: "192px 48px 48px",
+        padding: "192px 24px 48px",
         transform: "translate(1px, 2px)",
-        width: "185px",
-        height: "76px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+        width: "50%",
+        height: "auto",
       },
     },
     popularRankingRoot: {
@@ -66,6 +70,21 @@ export const LandingStyle = makeStyles((theme: Theme) =>
       width: "auto",
       maxWidth: "100%",
       justifyContent: "flex-start",
+      [theme.breakpoints.down(840)]: {
+        fontSize: "48px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
+      [theme.breakpoints.down(540)]: {
+        fontSize: "28px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
+      [theme.breakpoints.down(440)]: {
+        fontSize: "18px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
     },
     CardContainer: {
       display: "flex",

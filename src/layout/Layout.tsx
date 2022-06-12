@@ -10,6 +10,8 @@ import { Usage } from "pages/Usage/Usage";
 import { Contact } from "pages/Contact/Contact";
 import { useCallback, useEffect, useState } from "react";
 import { AccountSetting } from "pages/Account/Setting/AccountSetting";
+import { ThankYou } from "pages/ThankYou/ThankYou";
+import { ErrorRoute } from "pages/ErrorRoute/ErrorRoute";
 
 export default function Layout() {
   const classes = LayoutStyles();
@@ -48,9 +50,11 @@ export default function Layout() {
           <Route path='/' element={<Landing />} />
           <Route path='/account' element={<Account />} />
           <Route path='/account/setting' element={<AccountSetting />} />
+          <Route path='/account/setting/thankyou' element={<ThankYou />} />
           <Route path='/private/healthy' element={<Healthy />} />
           <Route path='/usage' element={<Usage />} />
           <Route path='/usage/contact' element={<Contact />} />
+          <Route path='/404' element={<ErrorRoute />} />
         </Routes>
       </div>
       <Footer />

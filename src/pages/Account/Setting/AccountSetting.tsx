@@ -1,12 +1,12 @@
-/** @format */
-
 import clsx from "clsx";
 import ActionButton from "components/ActionButton/ActionButton";
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { AccountSettingStyles } from "./AccountSettingStyle";
 
 export const AccountSetting = () => {
   const classes = AccountSettingStyles();
+  const navigate = useNavigate();
   const [lastName, setLastName] = useState("");
   const [firstName, setFirstName] = useState("");
   const [perEmail, setPerEmail] = useState("");
@@ -28,6 +28,10 @@ export const AccountSetting = () => {
       inputFile.current.click();
     }
   };
+
+  const handleSetting = ()=>{
+    navigate("/account/setting/thankyou")
+  }
 
   return (
     <div className={classes.root}>
@@ -137,6 +141,7 @@ export const AccountSetting = () => {
         <ActionButton
           type='dark'
           content='設定する'
+          action={handleSetting}
           className={classes.formBtn}
         />
       </div>
