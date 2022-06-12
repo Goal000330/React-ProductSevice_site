@@ -14,6 +14,11 @@ export const UsageCardStyle = makeStyles((theme: Theme) =>
         transitionDelay: "300ms",
         transitionDuration: "1000ms",
       },
+      [theme.breakpoints.down(440)]: {
+        padding : "24px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
     },
     title: {
       textAlign: "left",

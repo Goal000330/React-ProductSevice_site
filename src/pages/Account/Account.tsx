@@ -1,8 +1,14 @@
 import ActionButton from "components/ActionButton/ActionButton";
+import { useNavigate } from "react-router-dom";
 import { AccountStyles } from "./AccountStyle";
 
 export const Account = () => {
   const classes = AccountStyles();
+  const navigate = useNavigate();
+
+  const accountAction = ()=>{
+    navigate("/account/setting")
+  }
   return (
     <div className={classes.root}>
       <div className={classes.container}>
@@ -35,6 +41,7 @@ export const Account = () => {
           type='dark'
           content='アカウント情報 編集'
           className={classes.formBtn}
+          action={accountAction}
         />
       </div>
     </div>

@@ -2,7 +2,7 @@
 
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
-export const ContactStyles = makeStyles((theme: Theme) =>
+export const AccountSettingStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       backgroundColor: "#ebeff2",
@@ -10,6 +10,16 @@ export const ContactStyles = makeStyles((theme: Theme) =>
       boxSizing: "border-box",
       [theme.breakpoints.down(840)]: {
         padding: "96px 24px 96px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
+      [theme.breakpoints.down(540)]: {
+        padding: "48px 24px 48px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
+      [theme.breakpoints.down(440)]: {
+        padding: "24px",
         transitionDelay: "300ms",
         transitionDuration: "1000ms",
       },
@@ -35,8 +45,8 @@ export const ContactStyles = makeStyles((theme: Theme) =>
         transitionDuration: "1000ms",
       },
     },
-    contactTitle: {
-      color: "#000",
+    accountSettingTitle: {
+      color: "#55727e",
       fontFamily: "ヒラギノ角ゴ W6 JIS2004",
       fontSize: "28px",
       fontWeight: 600,
@@ -57,7 +67,12 @@ export const ContactStyles = makeStyles((theme: Theme) =>
         transitionDuration: "1000ms",
       },
     },
-    contactForm: {
+    name: {
+      display: "flex",
+      alignItems: "center",
+      width: "100%",
+    },
+    accountSettingForm: {
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
@@ -66,7 +81,7 @@ export const ContactStyles = makeStyles((theme: Theme) =>
       marginBottom: "24px",
     },
     formTitle: {
-      color: "#333",
+      color: "#55727e",
       fontFamily: "Lato",
       fontSize: "15px",
       fontWeight: 700,
@@ -76,6 +91,11 @@ export const ContactStyles = makeStyles((theme: Theme) =>
       transitionDelay: "400ms",
       transitionDuration: "1000ms",
       marginBottom: "10px",
+      [theme.breakpoints.down(440)]: {
+        fontSize: "12px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
     },
     symbol: {
       color: "#f23a3c",
@@ -154,6 +174,9 @@ export const ContactStyles = makeStyles((theme: Theme) =>
     },
     checkbox: {
       marginRight: "10px",
+    },
+    marginRight24: {
+      marginRight: "24px",
     },
   })
 );
