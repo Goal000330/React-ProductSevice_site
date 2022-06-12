@@ -16,6 +16,9 @@ export const HeathlyStyles = makeStyles((theme: Theme) =>
       alignItems: "center",
       padding: "0 12px",
       boxSizing: "border-box",
+      [theme.breakpoints.down(840)]:{
+        justifyContent: "space-between",
+      },
     },
     headerTitle: {
       textAlign: "left",
@@ -30,6 +33,11 @@ export const HeathlyStyles = makeStyles((theme: Theme) =>
       transition: ".3s cubic-bezier(.4,.4,0,1)",
       transitionDelay: "300ms",
       transitionDuration: "1000ms",
+      [theme.breakpoints.down(500)]:{
+        minWidth: "100px",
+        fontSize: "20px",
+        marginRight: "10px",
+      },
     },
     smallTitle: {
       color: "#55727e",
@@ -43,10 +51,17 @@ export const HeathlyStyles = makeStyles((theme: Theme) =>
       marginRight: "48px",
       minWidth: "100px",
       textAlign: "center",
+      [theme.breakpoints.down(840)]:{
+        display: "none",
+      },
     },
     categoryRoot: {
       display: "flex",
-      flexFlow: "wrap",
+      flexFlow: "nowrap",
+      overflowX: "scroll",
+      [theme.breakpoints.down(840)]:{
+        display: "none",
+      },
     },
     categoryTitle: {
       textAlign: "left",
@@ -57,6 +72,34 @@ export const HeathlyStyles = makeStyles((theme: Theme) =>
       height: "auto",
       lineHeight: 1.2,
       marginRight: "48px",
+      wordBreak: "keep-all",
+      cursor: "pointer",
+    },
+    menu:{
+      display: "none",
+      fontSize: "36px",
+      lineHeight: "36px",
+      color: "#55727e",
+      cursor: "pointer",
+      [theme.breakpoints.down(840)]:{
+        display: "unset",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
+      [theme.breakpoints.down(500)]:{
+        fontSize: "20px",
+        lineHeight: "20px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
+    },
+    categoryModal:{
+      position: "fixed",
+      width: "70%",
+      padding: "24px",
+      height: "100%",
+      background: "#fff",
+      zIndex: 1000,
     },
   })
 );

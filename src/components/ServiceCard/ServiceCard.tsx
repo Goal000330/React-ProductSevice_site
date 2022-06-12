@@ -7,7 +7,10 @@ export default function ServiceCard() {
   return (
     <>
       <div className={classes.root}>
-        <img src={backImg} className={classes.cardImg} />
+        <div className={classes.imgRoot}>
+          <div className={classes.slideRoot}></div>
+          <img src={backImg} className={classes.cardImg} />
+        </div>
         <div className={classes.cardDes}>
           〜150,000円｜本格ホームページ・サービスページ制作
         </div>

@@ -1,3 +1,5 @@
+/** @format */
+
 import { createStyles, Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 export const SidebarStyles = makeStyles((theme: Theme) =>
@@ -23,6 +25,10 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       cursor: "pointer",
       "&:hover": {
         opacity: 0.5,
+      },
+      [theme.breakpoints.down(400)]: {
+        width: "100px",
+        height: "25px",
       },
     },
     avatarRoot: {
@@ -85,6 +91,9 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       width: "40px",
       height: "40px",
       minWidth: "40px",
+      [theme.breakpoints.down(500)]: {
+        margin: 0,
+      },
     },
     itemContent: {
       color: "#9ab0bc",
@@ -98,6 +107,13 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       minWidth: "171.2px",
       boxSizing: "border-box",
       textAlign: "start",
+      [theme.breakpoints.down(500)]: {
+        minWidth: "133px",
+      },
+      [theme.breakpoints.down(400)]: {
+        minWidth: "80px",
+        fontSize: "12px",
+      },
     },
     itemBtn: {
       "& i": {

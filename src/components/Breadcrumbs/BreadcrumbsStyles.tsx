@@ -14,14 +14,6 @@ export const BreadcrumbsStyles = makeStyles((theme: Theme) =>
       transitionDelay: "200ms",
       transitionDuration: "200ms",
       boxSizing: "border-box",
-      [theme.breakpoints.down(1140)]: {
-        width: "calc(100% - 300px)",
-        marginLeft: "300px",
-      },
-      [theme.breakpoints.down(840)]: {
-        marginLeft: 0,
-        width: "100%",
-      },
     },
     homeLink: {
       color: "#aaaaaa",

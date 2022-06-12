@@ -17,6 +17,7 @@ export const HeaderStyles = makeStyles((theme: Theme) =>
     },
     menu: {
       display: "none",
+      color: "#475b69",
       [theme.breakpoints.down(840)]: {
         display: "flex",
         alignItems: "center",
@@ -32,6 +33,7 @@ export const HeaderStyles = makeStyles((theme: Theme) =>
       width: "136px",
       height: "36px",
       marginLeft: "12px",
+      cursor: "pointer",
       [theme.breakpoints.down(475)]: {
         display: "none",
       },
