@@ -2,14 +2,32 @@
 
 import clsx from "clsx";
 import ActionButton from "components/ActionButton/ActionButton";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { AccountSettingStyles } from "./AccountSettingStyle";
 
 export const AccountSetting = () => {
   const classes = AccountSettingStyles();
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [inquiry, setInquiry] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [perEmail, setPerEmail] = useState("");
+  const [companyEmail, setCompanyEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [passWord, setPassWord] = useState("");
+
+  const inputFile = useRef<HTMLInputElement>(null);
+  const [importImg, setImportImg] = useState<any>();
+
+  const onImgImport = ({
+    currentTarget: { files, name },
+  }: React.ChangeEvent<HTMLInputElement>) => {
+    if (files && files.length && name === "importImg") setImportImg(files[0]);
+  };
+
+  const handleFileInput = () => {
+    if (inputFile.current) {
+      inputFile.current.click();
+    }
+  };
 
   return (
     <div className={classes.root}>
@@ -23,9 +41,9 @@ export const AccountSetting = () => {
             </div>
             <input
               className={classes.formInput}
-              value={name}
+              value={lastName}
               placeholder='こちらのフォームより承っております'
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => setLastName(e.target.value)}
             />
           </div>
           <div className={classes.accountSettingForm}>
@@ -34,9 +52,9 @@ export const AccountSetting = () => {
             </div>
             <input
               className={classes.formInput}
-              value={email}
+              value={firstName}
               placeholder='こちらのフォームより承っております'
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setFirstName(e.target.value)}
             />
           </div>
         </div>
@@ -46,9 +64,9 @@ export const AccountSetting = () => {
           </div>
           <input
             className={classes.formInput}
-            value={name}
+            value={phoneNumber}
             placeholder='0X0-1234-5678'
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setPhoneNumber(e.target.value)}
           />
         </div>
         <div className={classes.accountSettingForm}>
@@ -57,9 +75,9 @@ export const AccountSetting = () => {
           </div>
           <input
             className={classes.formInput}
-            value={email}
+            value={companyEmail}
             placeholder='example@shisaku-pad.co.jp'
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setCompanyEmail(e.target.value)}
           />
         </div>
         <div className={classes.accountSettingForm}>
@@ -68,9 +86,9 @@ export const AccountSetting = () => {
           </div>
           <input
             className={classes.formInput}
-            value={email}
+            value={perEmail}
             placeholder='example@gmail.com'
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setPerEmail(e.target.value)}
           />
         </div>
         <div className={classes.accountSettingForm}>
@@ -79,21 +97,38 @@ export const AccountSetting = () => {
           </div>
           <input
             className={classes.formInput}
-            value={email}
-            placeholder='example@gmail.com'
-            onChange={(e) => setEmail(e.target.value)}
+            type='password'
+            value={passWord}
+            placeholder='******'
+            onChange={(e) => setPassWord(e.target.value)}
           />
         </div>
         <div className={classes.accountSettingForm}>
           <div className={classes.formTitle}>
             プロフィール写真 <span className={classes.symbol}>*</span>
           </div>
-          <input
-            className={classes.formInput}
-            value={email}
-            placeholder='example@gmail.com'
-            onChange={(e) => setEmail(e.target.value)}
-          />
+          <div className={classes.imgLoader} onClick={handleFileInput}>
+            <input
+              id='fileimport'
+              name='importImg'
+              accept='image/*'
+              type='file'
+              autoComplete='off'
+              tabIndex={-1}
+              style={{ display: "none" }}
+              ref={inputFile}
+              onChange={onImgImport}
+            />
+            {importImg ? (
+              <img
+                src={URL.createObjectURL(importImg)}
+                alt='image'
+                className={classes.importImg}
+              />
+            ) : (
+              <div className={classes.importLetter}>Please select</div>
+            )}
+          </div>
         </div>
         <div className={classes.policy}>
           <input type='checkbox' className={classes.checkbox} />

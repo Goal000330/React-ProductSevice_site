@@ -178,5 +178,25 @@ export const AccountSettingStyles = makeStyles((theme: Theme) =>
     marginRight24: {
       marginRight: "24px",
     },
+    imgLoader: {
+      width: "50%",
+      minHeight: "46px",
+      height: "auto",
+      border: "1px dashed #dddddd",
+      display: "flex",
+      justifyContent: "flex-start",
+      alignItems: "center",
+    },
+    importLetter: {
+      color: "#555555",
+      fontFamily: "Lato",
+      fontSize: "14px",
+      fontWeight: 400,
+      marginLeft: "16px",
+    },
+    importImg: {
+      width: "100%",
+      height: "100%",
+    },
   })
 );
