@@ -9,6 +9,11 @@ export const UsageCardStyle = makeStyles((theme: Theme) =>
       padding: "48px",
       boxSizing: "border-box",
       margin: "0 24px 48px 24px",
+      [theme.breakpoints.down(540)]: {
+        margin: "0 0 24px 0",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
     },
     title: {
       textAlign: "left",
