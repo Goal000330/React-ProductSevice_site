@@ -1,5 +1,3 @@
-/** @format */
-
 import ActionButton from "components/ActionButton/ActionButton";
 import { AccountStyles } from "./AccountStyle";
 

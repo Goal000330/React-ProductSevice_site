@@ -1,5 +1,3 @@
-/** @format */
-
 import clsx from "clsx";
 import { LinkLetterStyles } from "./LinkLetterStyles";
 

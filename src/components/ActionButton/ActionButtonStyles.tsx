@@ -1,5 +1,3 @@
-/** @format */
-
 import { createStyles, Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 export const ActionButtonStyles = makeStyles((theme: Theme) =>
@@ -27,6 +25,18 @@ export const ActionButtonStyles = makeStyles((theme: Theme) =>
         boxShadow: "0px 0px 0px rgb(0 0 0 / 20%)",
         transform: "translate(10px, 10px)",
       },
+      [theme.breakpoints.down(540)]: {
+        padding: "12px 24px",
+        "& p": {
+          fontSize: "12px",
+        },
+      },
+      [theme.breakpoints.down(400)]: {
+        padding: "8px 10px",
+        "& p": {
+          fontSize: "10px",
+        },
+      },
     },
     lightRoot: {
       cursor: "pointer",
@@ -50,6 +60,18 @@ export const ActionButtonStyles = makeStyles((theme: Theme) =>
       "&:hover": {
         boxShadow: "0px 0px 0px rgb(0 0 0 / 20%)",
         transform: "translate(10px, 10px)",
+      },
+      [theme.breakpoints.down(540)]: {
+        padding: "12px 24px",
+        "& p": {
+          fontSize: "12px",
+        },
+      },
+      [theme.breakpoints.down(400)]: {
+        padding: "8px 10px",
+        "& p": {
+          fontSize: "10px",
+        },
       },
     },
     darkDes: {

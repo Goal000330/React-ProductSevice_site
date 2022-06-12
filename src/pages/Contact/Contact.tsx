@@ -1,5 +1,3 @@
-/** @format */
-
 import ActionButton from "components/ActionButton/ActionButton";
 import { useState } from "react";
 import { ContactStyles } from "./ContactStyle";

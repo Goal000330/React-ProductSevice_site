@@ -1,5 +1,3 @@
-/** @format */
-
 import { UsageCardStyle } from "./UsageCardStyle";
 
 export const UsageCard = () => {

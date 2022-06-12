@@ -1,5 +1,3 @@
-/** @format */
-
 import { createStyles, Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 export const SidebarStyles = makeStyles((theme: Theme) =>
@@ -7,7 +5,8 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
     root: {
       position: "fixed",
       textAlign: "center",
-      width: "276px",
+      width: "300px",
+      boxSizing: "border-box",
       background: "#fff",
       padding: "48px 12px 48px 12px",
       height: "100%",
@@ -15,6 +14,7 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       transition: ".3s cubic-bezier(.4,.4,0,1)",
       [theme.breakpoints.down(840)]: {
         display: "none",
+        width: "50%",
       },
     },
     logoImg: {
@@ -139,6 +139,10 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       height: "100%",
       background: "#364750",
       boxShadow: "0px 6px 15px 0px rgb(0 0 0 / 20%)",
+      [theme.breakpoints.down(840)]: {
+        left: "50%",
+        width: "50%",
+      },
     },
     rightHeader: {
       height: "96px",
@@ -187,6 +191,60 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       letterSpacing: "0.15em",
       lineHeight: "1.4",
       padding: "0 12px",
+    },
+    closePart: {
+      display: "none",
+      [theme.breakpoints.down(840)]: {
+        left: "50%",
+        width: "50%",
+        position: "fixed",
+        top: 0,
+        height: "100%",
+        display: "flex",
+        justifyContent: "right",
+        padding: "30px",
+        zIndex: 2,
+        backgroundColor: "rgb(0, 0, 0, 0.2)",
+        boxSizing: "border-box",
+      },
+    },
+    closeRootIcon: {
+      cursor: "pointer",
+      "& i": {
+        color: "#fff",
+        fontSize: "35px",
+        lineHeight: "35px",
+      },
+    },
+    closeRightPart: {
+      position: "fixed",
+      top: 0,
+      left: 600,
+      width: "calc(100% - 600px)",
+      height: "100%",
+      display: "flex",
+      justifyContent: "right",
+      padding: "30px",
+      zIndex: 2,
+      backgroundColor: "rgb(0, 0, 0, 0.2)",
+      boxSizing: "border-box",
+      [theme.breakpoints.down(840)]: {
+        display: "none",
+      },
+    },
+    closeRightRootIcon: {
+      cursor: "pointer",
+      "& i": {
+        color: "#000",
+        fontSize: "35px",
+        lineHeight: "35px",
+      },
+    },
+    displayNone: {
+      display: "none",
+    },
+    displayShow: {
+      display: "unset",
     },
   })
 );

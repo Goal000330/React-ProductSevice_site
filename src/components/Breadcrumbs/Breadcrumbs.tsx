@@ -1,5 +1,3 @@
-/** @format */
-
 import { BreadcrumbsStyles } from "./BreadcrumbsStyles";
 
 export default function Breadcrumbs() {

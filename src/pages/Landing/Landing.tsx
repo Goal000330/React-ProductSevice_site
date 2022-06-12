@@ -1,5 +1,3 @@
-/** @format */
-
 import { LandingStyle } from "./LandingStyle";
 import clsx from "clsx";
 import ServiceCard from "components/ServiceCard/ServiceCard";

@@ -1,5 +1,3 @@
-/** @format */
-
 import backImg from "./../../assets/images/2.png";
 import { ServiceCardStyles } from "./ServiceCardStyles";
 

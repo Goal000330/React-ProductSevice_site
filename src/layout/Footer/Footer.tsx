@@ -1,5 +1,3 @@
-/** @format */
-
 import { FooterStyles } from "./FooterStyles";
 
 export default function Footer() {
