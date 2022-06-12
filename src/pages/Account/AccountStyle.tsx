@@ -6,6 +6,21 @@ export const AccountStyles = makeStyles((theme: Theme) =>
       backgroundColor: "#ebeff2",
       padding: "96px 48px 144px 48px",
       boxSizing: "border-box",
+      [theme.breakpoints.down(1140)]:{
+        padding: "96px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
+      [theme.breakpoints.down(700)]:{
+        padding: "48px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
+      [theme.breakpoints.down(540)]:{
+        padding: "24px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
     },
     container: {
       background: "#fff",
@@ -18,6 +33,21 @@ export const AccountStyles = makeStyles((theme: Theme) =>
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
+      [theme.breakpoints.down(1140)]:{
+        padding: "96px 48px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
+      [theme.breakpoints.down(700)]:{
+        padding: "48px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
+      [theme.breakpoints.down(540)]:{
+        padding: "24px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
     },
     accountTitle: {
       color: "#55727e",
@@ -30,6 +60,11 @@ export const AccountStyles = makeStyles((theme: Theme) =>
       textAlign: "left",
       transitionDelay: "300ms",
       transitionDuration: "1000ms",
+      [theme.breakpoints.down(540)]:{
+        marginBottom: "24px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
     },
     accountForm: {
       display: "flex",
@@ -51,6 +86,11 @@ export const AccountStyles = makeStyles((theme: Theme) =>
       width: "35%",
       transitionDelay: "400ms",
       transitionDuration: "1000ms",
+      [theme.breakpoints.down(440)]:{
+        fontSize: "12px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
     },
     formValue: {
       color: "#000",
@@ -63,10 +103,20 @@ export const AccountStyles = makeStyles((theme: Theme) =>
       textAlign: "left",
       width: "60%",
       transitionDelay: "400ms",
-      transitionDuration: "1000ms",
+      transitionDuration: "1000ms", 
+      [theme.breakpoints.down(440)]:{
+        fontSize: "12px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
     },
     formBtn: {
       marginTop: "48px",
+      [theme.breakpoints.down(540)]:{
+        marginTop: "24px",
+        transitionDelay: "300ms",
+        transitionDuration: "1000ms",
+      },
     },
   })
 );
