@@ -1,3 +1,5 @@
+/** @format */
+
 import { keyframes } from "@emotion/react";
 
 export const fadeInUp = keyframes`
@@ -49,6 +51,7 @@ to {
     opacity: 1;
     transform: none
 }`;
+
 export const fadeInDownShorter2 = keyframes`
 from {
     opacity: 0;
@@ -82,7 +85,7 @@ export const slideInUp = keyframes`{
 }`;
 
 export const slideInDown = keyframes`{
-  0% {
+  from {
       transform: translate3d(0, -100%, 0);
       visibility: visible
   }
@@ -90,4 +93,29 @@ export const slideInDown = keyframes`{
   to {
       transform: translateZ(0)
   }
+}`;
+
+/////////////////-----customize for this project----------////////////////
+
+export const landingLetter = keyframes`
+from {
+    opacity: 0;
+    transform: translate(0,50px);
+    transform-origin: 0 0;
+}
+
+to {
+    opacity: 1;
+    transform: none
+}`;
+
+export const slideImg = keyframes`
+from {
+    transform: scale(1,1);
+    transform-origin: center right;
+}
+
+to {
+    transform: scale(0,1);
+    transform-origin: center right;
 }`;

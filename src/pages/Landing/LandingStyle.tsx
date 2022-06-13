@@ -102,6 +102,7 @@ export const LandingStyle = makeStyles((theme: Theme) =>
       height: "520px",
       overflow: "hidden",
       borderRadius: "10px",
+      position: "relative",
       [theme.breakpoints.down(1140)]: {
         height: "400px",
       },
@@ -228,6 +229,20 @@ export const LandingStyle = makeStyles((theme: Theme) =>
       [theme.breakpoints.down(540)]: {
         margin: "0 auto",
       },
+    },
+    slideRoot: {
+      background: "#1e5a9f",
+      flex: "none",
+      height: "100%",
+      margin: "0 0 0 0",
+      width: "100%",
+      maxWidth: "100%",
+      zIndex: 2,
+      top: "0px",
+      bottom: "NaNpx",
+      right: "NaNpx",
+      left: "0px",
+      position: "absolute",
     },
   })
 );
