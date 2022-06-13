@@ -1,41 +1,93 @@
-export function isEmptyObject(obj: any) {
-  for (var key in obj) {
-    if (obj.hasOwnProperty(key)) return false;
-  }
-  return true;
+import { keyframes } from "@emotion/react";
+
+export const fadeInUp = keyframes`
+0% {
+    -webkit-transform: translate3d( 0, 100%, 0 );
+    opacity: 0;
+    transform: translate3d( 0, 100 %, 0 )
 }
 
-export const dateConvert = (timeStamp: any) => {
-  const time = new Date(timeStamp * 1000);
-  return (
-    time.getFullYear() +
-    "/" +
-    (time.getMonth() + 1) +
-    "/" +
-    time.getDate() +
-    " " +
-    ("0" + time.getHours()).slice(-2) +
-    ":" +
-    ("0" + time.getMinutes()).slice(-2)
-  );
-};
+to {
+    -webkit-transform: translateZ( 0 );
+    opacity: 1;
+    transform: translateZ( 0 )
+}`;
 
-export const onlydateConvert = (timeStamp: any) => {
-  const time = new Date(timeStamp * 1000);
-  return (
-    time.getFullYear() + "/" + (time.getMonth() + 1) + "/" + time.getDate()
-  );
-};
+export const fadeInRight = keyframes`
+0% {
+    -webkit-transform: translate3d(100%,0,0);
+    opacity: 0;
+    transform: translate3d(100%,0,0)
+}
 
-export const addCommas = (nStr: any) => {
-  var inputValue = nStr.toString();
-  var x = inputValue.split(".");
-  var x1 = x[0];
-  var x2 = x.length > 1 ? "." + x[1].slice(0, 1) : "";
-  x2 = x2 === ".0" ? " " : x2;
-  var rgx = /(\d+)(\d{3})/;
-  while (rgx.test(x1)) {
-    x1 = x1.replace(rgx, "$1" + "," + "$2");
+to {
+    -webkit-transform: translateZ(0);
+    opacity: 1;
+    transform: translateZ(0)
+}`;
+
+export const fadeInLeft = keyframes`
+0% {
+    -webkit-transform: translate3d(-100%,0,0);
+    opacity: 0;
+    transform: translate3d(-100%,0,0)
+}
+
+to {
+    -webkit-transform: translateZ(0);
+    opacity: 1;
+    transform: translateZ(0)
+}`;
+export const fadeInDownShorter = keyframes`
+from {
+    opacity: 0;
+    transform: translate(0,-50px);
+    transform-origin: 0 0;
+}
+
+to {
+    opacity: 1;
+    transform: none
+}`;
+export const fadeInDownShorter2 = keyframes`
+from {
+    opacity: 0;
+    transform: translate(0,-30px);
+    transform-origin: 0 0;
+}
+
+to {
+    opacity: 1;
+    transform: none
+}`;
+
+export const maskRight = keyframes`{
+  from {
+      transform: translate(-100%,0)
   }
-  return x1 + x2;
-};
+  to {
+      transform: translate(0,0)
+  }
+}`;
+
+export const slideInUp = keyframes`{
+  0% {
+      transform: translate3d(0, 100%, 0);
+      visibility: visible
+  }
+
+  to {
+      transform: translateZ(0)
+  }
+}`;
+
+export const slideInDown = keyframes`{
+  0% {
+      transform: translate3d(0, -100%, 0);
+      visibility: visible
+  }
+
+  to {
+      transform: translateZ(0)
+  }
+}`;

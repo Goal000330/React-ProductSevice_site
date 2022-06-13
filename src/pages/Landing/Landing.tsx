@@ -1,3 +1,5 @@
+/** @format */
+
 import { LandingStyle } from "./LandingStyle";
 import clsx from "clsx";
 import ServiceCard from "components/ServiceCard/ServiceCard";
@@ -5,14 +7,18 @@ import LinkLetter from "components/LinkLetter/LinkLetter";
 import landLetter from "assets/images/landing-letter.webp";
 import { Grid } from "@material-ui/core";
 import ActionButton from "components/ActionButton/ActionButton";
+import { Reveal } from "react-awesome-reveal";
+import { fadeInDownShorter2 } from "config/utils";
 
 export const Landing = () => {
   const classes = LandingStyle();
   return (
     <>
-      <div className={classes.landingImgRoot}>
-        <img src={landLetter} className={classes.landingLetter}></img>
-      </div>
+      <Reveal keyframes={fadeInDownShorter2} triggerOnce>
+        <div className={classes.landingImgRoot}>
+          <img src={landLetter} className={classes.landingLetter}></img>
+        </div>
+      </Reveal>
       <div className={classes.popularRankingRoot}>
         <div className={classes.popularRankingTitleContainer}>
           <div className={classes.popularRankingLeft}>
@@ -23,6 +29,7 @@ export const Landing = () => {
           </div>
           <LinkLetter />
         </div>
+
         <div className={classes.CardContainer}>
           <Grid container>
             <Grid item md={4} sm={6} xs={12}>
