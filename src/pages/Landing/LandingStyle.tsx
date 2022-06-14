@@ -1,5 +1,3 @@
-/** @format */
-
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import serviceBackground1 from "assets/images/service1.png";
 import serviceBackground2 from "assets/images/service2.png";

@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Landing } from "pages/Landing/Landing";
 import { Account } from "pages/Account/Account";
-import { Healthy } from "pages/Heathly/Heathly";
 import { LayoutStyles } from "./LayoutStyle";
 import Header from "./Header/Header";
 import Sidebar from "./Sidebar/Sidebar";
@@ -12,6 +11,7 @@ import { useCallback, useEffect, useState } from "react";
 import { AccountSetting } from "pages/Account/Setting/AccountSetting";
 import { ThankYou } from "pages/ThankYou/ThankYou";
 import { ErrorRoute } from "pages/ErrorRoute/ErrorRoute";
+import { Healthy } from "pages/Heathly/Heathly";
 
 export default function Layout() {
   const classes = LayoutStyles();

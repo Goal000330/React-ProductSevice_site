@@ -1,5 +1,3 @@
-/** @format */
-
 import { LandingStyle } from "./LandingStyle";
 import clsx from "clsx";
 import ServiceCard from "components/ServiceCard/ServiceCard";
@@ -8,19 +6,19 @@ import landLetter from "assets/images/landing-letter.webp";
 import { Grid } from "@material-ui/core";
 import ActionButton from "components/ActionButton/ActionButton";
 import { Reveal } from "react-awesome-reveal";
-import { landingLetter, slideImg } from "config/utils";
+import { letterDownUp, letterUpDown, slideImg } from "config/utils";
 
 export const Landing = () => {
   const classes = LandingStyle();
   return (
     <>
       <div className={classes.landingImgRoot}>
-        <Reveal keyframes={landingLetter} triggerOnce delay={2000}>
+        <Reveal keyframes={letterDownUp} triggerOnce delay={2000}>
           <img src={landLetter} className={classes.landingLetter}></img>
         </Reveal>
       </div>
       <div className={classes.popularRankingRoot}>
-        <Reveal keyframes={landingLetter} triggerOnce>
+        <Reveal keyframes={letterDownUp} triggerOnce>
           <div className={classes.popularRankingTitleContainer}>
             <div className={classes.popularRankingLeft}>
               <i className={clsx("fas fa-crown", classes.kingIcon)}></i>
@@ -47,7 +45,7 @@ export const Landing = () => {
         </div>
       </div>
       <div className={classes.popularRankingRoot}>
-        <Reveal keyframes={landingLetter} triggerOnce>
+        <Reveal keyframes={letterDownUp} triggerOnce>
           <div className={classes.popularRankingTitleContainer}>
             <div className={classes.popularRankingLeft}>
               <i className={clsx("fas fa-bell", classes.kingIcon)}></i>
@@ -83,9 +81,14 @@ export const Landing = () => {
                 <div></div>
               </Reveal>
               <div className={classes.service1}>
-                <div className={classes.serviceTitle}>
-                  施策ぱっとの<br></br> 使い方
-                </div>
+                <Reveal
+                  keyframes={letterUpDown}
+                  className={classes.slideRoot}
+                  triggerOnce>
+                  <div className={classes.serviceTitle}>
+                    施策ぱっとの<br></br> 使い方
+                  </div>
+                </Reveal>
                 <ActionButton
                   className={classes.serviceBtn}
                   content='利用方法'
@@ -102,9 +105,14 @@ export const Landing = () => {
                 <div></div>
               </Reveal>
               <div className={classes.service2}>
-                <div className={classes.serviceTitle}>
-                  運営への<br></br> お問い合わせ
-                </div>
+                <Reveal
+                  keyframes={letterUpDown}
+                  className={classes.slideRoot}
+                  triggerOnce>
+                  <div className={classes.serviceTitle}>
+                    運営への<br></br> お問い合わせ
+                  </div>
+                </Reveal>
                 <ActionButton
                   className={classes.serviceBtn}
                   content='お問い合わせ'
