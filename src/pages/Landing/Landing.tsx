@@ -82,8 +82,7 @@ export const Landing = () => {
               </Reveal>
               <div className={classes.service1}>
                 <Reveal
-                  keyframes={letterUpDown}
-                  className={classes.slideRoot}
+                  keyframes={letterDownUp}
                   triggerOnce>
                   <div className={classes.serviceTitle}>
                     施策ぱっとの<br></br> 使い方
@@ -106,8 +105,7 @@ export const Landing = () => {
               </Reveal>
               <div className={classes.service2}>
                 <Reveal
-                  keyframes={letterUpDown}
-                  className={classes.slideRoot}
+                  keyframes={letterDownUp}
                   triggerOnce>
                   <div className={classes.serviceTitle}>
                     運営への<br></br> お問い合わせ
